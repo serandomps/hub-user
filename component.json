@@ -1,0 +1,7 @@
+{
+    "name": "user",
+    "description": "user component",
+    "scripts": ["index.js", "permissions.js"],
+    "main": "index.js",
+    "locals": ["serand", "utils"]
+}
