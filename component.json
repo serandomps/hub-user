@@ -1,7 +1,10 @@
 {
-    "name": "user",
-    "description": "user component",
+    "name": "hub-user",
+    "description": "hub-user component",
     "scripts": ["index.js", "permissions.js"],
     "main": "index.js",
-    "locals": ["serand", "utils"]
+    "dependencies": {
+        "serandomps/serand": "master",
+        "serandomps/hub-utils": "master"
+    }
 }

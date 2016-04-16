@@ -1,5 +1,5 @@
 var serand = require('serand');
-var utils = require('utils');
+var utils = require('hub-utils');
 
 var perms = require('./permissions');
 
@@ -209,24 +209,6 @@ serand.on('user', 'logged in', function (usr) {
     setTimeout(function () {
         refresh();
     }, nxt);
-});
-
-serand.on('user', 'permissions', function (user, done) {
-    $.ajax({
-        method: 'GET',
-        url: '/apis/v/tokens/' + user.tid,
-        headers: {
-            'X-Host': 'accounts.serandives.com',
-            'Authorization': 'Bearer ' + user.access
-        },
-        dataType: 'json',
-        success: function (token) {
-            done(false, token);
-        },
-        error: function () {
-            done('permissions error');
-        }
-    });
 });
 
 initialize();
